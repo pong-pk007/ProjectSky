@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pongs_000.projectsky.Detail">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bardetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbardetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:foreground="?android:selectableItemBackground"
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/placeholder_200x200"
+                    android:id="@+id/imgspdetail" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:foreground="?android:selectableItemBackground"
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout2">
+
+                    <TextView
+                        android:text="price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/placedetail" />
+
+                    <TextView
+                        android:text="latlong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/name_type" />
+
+
+                    <TextView
+                        android:text="telephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/telephonedetail" />
+
+                    <TextView
+                        android:text="address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/addressdetail" />
+
+                    <TextView
+                        android:text="latlong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/latlongdetail" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+    <!--<ImageButton-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:id="@+id/btplacedetail"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:src="@drawable/ic_place_black_24dp"-->
+        <!--android:layout_gravity="center_horizontal|center"-->
+        <!--android:onClick="getRes"-->
+        <!--android:layout_below="@+id/linearLayout2"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:foreground="?android:selectableItemBackground"
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+            <fragment
+                android:id="@+id/googleMap"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_weight="1" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
